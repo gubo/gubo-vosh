@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="binding" type="com.gubo.vosh.wash.WashFragment"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/washmap"
+            tools:context=".wash.WashFragment"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+        </com.google.android.gms.maps.MapView>
+
+        <Button
+            android:onClick="@{ ( view ) -> binding.onRequest() }"
+            android:text="request" android:layout_gravity="bottom|right"
+            android:layout_margin="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        </Button>
+
+    </FrameLayout>
+
+</layout>

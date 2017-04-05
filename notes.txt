@@ -1,0 +1,46 @@
+
+
+http://www.windowscentral.com/how-turn-your-windows-10-pc-wireless-hotspot
+
+FCM token:
+ezYc1HqCSz4:APA91bEoCuXzr-AafTpr935srP9T2WaHPZLPuX4nJM2qAL8AHlXCpy-sCUaTvvVTJ2dpkhqp-UqkOPSFw00P51q5hHIb-AsM27uHOEh8GNHcICFsXrG1NZsabyqd-p_ssne6Jeu8QHcv
+
+
+http://imsba.com/api/users/payment_method?key=UtllAkV2uKr$EeWmT$WeohWQTbbP$9UTDdbax4c$PE@qSVNIUHXfYR2P0dC$mtSZ
+http://imsba.com/api/store/place_order?key=UtllAkV2uKr$EeWmT$WeohWQTbbP$9UTDdbax4c$PE@qSVNIUHXfYR2P0dC$mtSZ
+
+
+\(etE@@hKPc;C!jq
+RgK{POST /api/store/place_order?key=UtllAkV2uKr$EeWmT$WeohWQTbbP$9UTDdbax4c$PE@qSVNIUHXfYR2P0dC$mtSZ HTTP/1.1
+Host: imsba.com
+Connection: keep-alive
+Content-Length: 179
+User-Agent: Mozilla/5.0 (Linux; Android 5.1.1; Nexus 4 Build/LMY48T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36
+Origin: file://
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US
+Cookie: ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%228cce2bcf76f6e20f924e132e2e23e6fd%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A14%3A%2210.189.255.252%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A120%3A%22Mozilla%2F5.0+%28Linux%3B+Android+5.1.1%3B+Nexus+4+Build%2FLMY48T%3B+wv%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Version%2F4.0+Chrome%2F5%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1491352700%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D165b30efd21d0c0f2fb9656c3de6b31b
+X-Requested-With: com.vosh.users
+
+customer_id=31287&x_skus=Cars%3A%201%2C%20SUV%3A%200&amount_after=27&order_date=04%2F04%2F2017&service_location=4460%20Hazeltine%20Ave%2C%20Sherman%20Oaks%2C%20CA%2091423%2C%20USA
+
+
+customer_id=31287&x_skus=Cars%3A%201%2C%20SUV%3A%200&amount_after=27&order_date=04%2F04%2F2017&service_location=4460%20Hazeltine%20Ave%2C%20Sherman%20Oaks%2C%20CA%2091423%2C%20USA
+
+
+
+et\(E@,YhKPC!c%t:
+RgKHTTP/1.1 200 OK
+Date: Wed, 05 Apr 2017 00:41:48 GMT
+Server: Apache/2.2.15 (CentOS) DAV/2 mod_ssl/2.2.15 OpenSSL/1.0.1e-fips
+Access-Control-Allow-Origin: *
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 21
+Keep-Alive: timeout=5, max=120
+Connection: Keep-Alive
+Content-Type: text/html; charset=UTF-8
+
+3!

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1008808503852",
+    "firebase_url": "https://gubo-vosh.firebaseio.com",
+    "project_id": "gubo-vosh",
+    "storage_bucket": "gubo-vosh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008808503852:android:f744d0b1943dfc71",
+        "android_client_info": {
+          "package_name": "com.gubo.vosh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008808503852-ov06unukn3i8fd4pclhq338l306ab7ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gubo.vosh",
+            "certificate_hash": "5c31b67929686891f98543b35202d54332ec916c"
+          }
+        },
+        {
+          "client_id": "1008808503852-uktdcds2kloa53h9pg21a5ssvs2euubl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLg0tq8D5YfLeSoGubePA9UJK0eZBBFkQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008808503852-uktdcds2kloa53h9pg21a5ssvs2euubl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

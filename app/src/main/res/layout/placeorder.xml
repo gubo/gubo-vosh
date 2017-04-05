@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="binding" type="com.gubo.vosh.PlaceOrderActivity"/>
+    </data>
+
+    <android.support.percent.PercentFrameLayout
+        android:background="#55000000"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_gravity="center"
+            android:background="#FFFFFF" app:layout_widthPercent="90%" app:layout_heightPercent="90%">
+
+        <LinearLayout
+            android:orientation="vertical" android:padding="10dp"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+
+            <View android:layout_width="match_parent" android:layout_height="15dp"></View>
+
+            <TextView
+                android:text="vosh date" style="@style/TextAppearance.AppCompat.Small" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+            </TextView>
+            <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1dp"></View>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+
+            <LinearLayout
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView
+                    android:hint="01/01/1900" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content">
+                </TextView>
+                <ImageView
+                    android:src="@drawable/ic_calendar"
+                    android:layout_width="wrap_content" android:layout_height="match_parent">
+                </ImageView>
+                <android.support.v7.widget.AppCompatSpinner
+                    android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:entries="@{ binding.times }" android:selectedItemPosition="@={ binding.timeselection }">
+                </android.support.v7.widget.AppCompatSpinner>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="25dp"></View>
+
+            <TextView
+                android:text="vosh location" style="@style/TextAppearance.AppCompat.Small" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+            </TextView>
+            <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1dp"></View>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+
+            <EditText
+                android:text="@={ binding.streetaddress }"
+                android:hint="street address" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+
+            <EditText
+                android:text="@={ binding.city }"
+                android:hint="city" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+
+            <LinearLayout
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText
+                    android:text="@={ binding.state }"
+                    android:hint="state" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".35" android:layout_width="0dp" android:layout_height="wrap_content">
+                </EditText>
+                <EditText
+                    android:text="@={ binding.zip }"
+                    android:hint="zip" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".35" android:layout_width="0dp" android:layout_height="wrap_content">
+                </EditText>
+                <EditText
+                    android:text="@={ binding.country }"
+                    android:hint="USA" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".2" android:layout_width="0dp" android:layout_height="wrap_content">
+                </EditText>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="25dp"></View>
+
+            <TextView
+                android:text="summary" style="@style/TextAppearance.AppCompat.Small" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+            </TextView>
+            <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1dp"></View>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+
+            <EditText
+                android:text="@={ binding.summary }" android:background="#00000000"
+                android:hint="1 CAR x $27 exterior,interior,tires,wheels" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+            <EditText
+                android:text="@={ binding.promo }" android:background="#00000000"
+                android:hint="PROMO CODE:" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+            <View android:background="#55000000" android:layout_width="match_parent" android:layout_height="1dp"></View>
+            <EditText
+                android:text="@={ binding.total }" android:background="#00000000" android:textStyle="bold"
+                android:hint="TOTAL CHARGE: $27.00" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+
+            <View android:layout_width="match_parent" android:layout_height="25dp"></View>
+
+            <TextView
+                android:text="payment" style="@style/TextAppearance.AppCompat.Small" android:textStyle="bold"
+                android:layout_width="wrap_content" android:layout_height="wrap_content">
+            </TextView>
+            <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="1dp"></View>
+            <View android:layout_width="match_parent" android:layout_height="5dp"></View>
+
+            <EditText
+                android:text="@={ binding.cardno }"
+                android:hint="credit card number" style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </EditText>
+            <LinearLayout
+                android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText
+                    android:text="@={ binding.cardexpiration }"
+                    android:hint="expiration date" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".7" android:layout_width="0dp" android:layout_height="wrap_content">
+                </EditText>
+                <EditText
+                    android:text="@={ binding.cardcode }"
+                    android:hint="code" style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_weight=".3" android:layout_width="0dp" android:layout_height="wrap_content">
+                </EditText>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="15dp"></View>
+
+            <Button
+                android:text="request vosh" android:drawableLeft="@drawable/ic_notification"
+                android:layout_width="match_parent" android:layout_height="wrap_content">
+            </Button>
+
+            <View android:layout_width="match_parent" android:layout_height="15dp"></View>
+        </LinearLayout>
+
+        </ScrollView>
+    </android.support.percent.PercentFrameLayout>
+
+</layout>

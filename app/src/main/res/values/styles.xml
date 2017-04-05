@@ -1,0 +1,39 @@
+<resources>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@anim/activity_in</item>
+        <item name="android:windowExitAnimation">@anim/activity_out</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppThemeModal" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/colorTranslucent</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="ExpandedTextAppearance" parent="TextAppearance.AppCompat.Large.Inverse">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="CollapsedTextAppearance" parent="TextAppearance.AppCompat.Medium.Inverse">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
