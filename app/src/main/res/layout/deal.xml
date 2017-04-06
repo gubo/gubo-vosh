@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    card_view:cardCornerRadius="5dp"
+    card_view:cardUseCompatPadding="true"
+
+    android:translationZ="5dp"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.gubo.vosh.StaggeredImageView
+                android:id="@+id/dealimageview"
+                android:scaleType="centerCrop"
+                android:layout_weight="1" android:layout_width="match_parent" android:layout_height="0dp">
+            </com.gubo.vosh.StaggeredImageView>
+            <TextView
+                android:id="@+id/dealmerchantview"
+                style="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:shadowColor="#55000000" android:shadowDx="2" android:shadowDy="2" android:shadowRadius="5"
+                android:gravity="center" android:textStyle="bold" android:lines="1" android:ellipsize="end"
+                android:layout_margin="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            </TextView>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dealtitleview"
+            style="@style/TextAppearance.AppCompat.Medium" android:ellipsize="end"
+            android:layout_marginTop="5dp" android:layout_width="match_parent" android:layout_height="48dp">
+        </TextView>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

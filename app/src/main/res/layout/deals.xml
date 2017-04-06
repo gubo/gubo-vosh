@@ -8,9 +8,13 @@
         <variable name="binding" type="com.gubo.vosh.deals.DealsFragment"/>
     </data>
 
-    <FrameLayout
-        android:background="#EEEEEE"
-        android:layout_width="match_parent" android:layout_height="match_parent">
-    </FrameLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/dealsswiperefreshlayout"
+        android:background="@drawable/home" android:layout_width="match_parent" android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dealsrecyclerview"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </layout>

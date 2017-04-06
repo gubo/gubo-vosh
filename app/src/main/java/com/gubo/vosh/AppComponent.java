@@ -6,6 +6,7 @@ import dagger.*;
 import com.gubo.vosh.deals.*;
 import com.gubo.vosh.home.*;
 import com.gubo.vosh.wash.*;
+import com.gubo.vosh.webapi.*;
 
 /**
  * Created by GUBO on 4/4/2017.
@@ -18,4 +19,6 @@ public interface AppComponent
     void inject( HomeFragment homeFragment );
     void inject( WashFragment washFragment );
     void inject( DealsFragment dealsFragment );
+
+    void inject( GETDeals getDeals );
 }

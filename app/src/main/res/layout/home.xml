@@ -8,9 +8,35 @@
         <variable name="binding" type="com.gubo.vosh.home.HomeFragment"/>
     </data>
 
-    <FrameLayout
-        android:background="#EEEEEE"
+    <android.support.percent.PercentFrameLayout
+        android:background="@drawable/home" android:padding="10dp"
         android:layout_width="match_parent" android:layout_height="match_parent">
-    </FrameLayout>
+
+        <TableLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TableRow>
+                <ImageView android:layout_margin="5dp" android:src="@drawable/ic_avatar" android:layout_width="76dp" android:layout_height="76dp"></ImageView>
+                <TextView android:hint="guest user" android:layout_gravity="center_vertical" android:layout_weight="1" android:layout_width="0dp" android:layout_height="48dp"></TextView>
+            </TableRow>
+            <View android:layout_width="match_parent" android:layout_height="10dp"></View>
+            <View android:layout_width="match_parent" android:layout_height="10dp"></View>
+            <TableRow>
+                <Button
+                    android:text="sign-up" android:theme="@style/AppTheme.Button"
+                    android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content">
+                </Button>
+                <Button
+                    android:text="sign-in" android:theme="@style/AppTheme.Button.Green"
+                    android:layout_weight=".5" android:layout_width="0dp" android:layout_height="wrap_content">
+                </Button>
+            </TableRow>
+            <View android:layout_width="match_parent" android:layout_height="10dp"></View>
+            <TextView android:text="sign-in with:" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content"></TextView>
+            <TableRow>
+                <ImageView android:layout_margin="5dp" android:src="@drawable/ic_facebook" android:layout_width="48dp" android:layout_height="48dp"></ImageView>
+                <ImageView android:layout_margin="5dp" android:src="@drawable/ic_google" android:layout_width="48dp" android:layout_height="48dp"></ImageView>
+            </TableRow>
+        </TableLayout>
+    </android.support.percent.PercentFrameLayout>
 
 </layout>

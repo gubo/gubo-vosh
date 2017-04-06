@@ -17,7 +17,6 @@ import android.support.v7.widget.*;
 import android.support.design.widget.*;
 import android.support.v7.app.ActionBarDrawerToggle;
 
-import io.reactivex.*;
 import io.reactivex.functions.*;
 import io.reactivex.schedulers.*;
 import io.reactivex.disposables.*;
@@ -29,7 +28,6 @@ import com.gubo.vosh.event.RequestEvent;
 import com.gubo.vosh.home.*;
 import com.gubo.vosh.wash.*;
 import com.gubo.vosh.deals.*;
-import com.gubo.vosh.webapi.PlaceOrder;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,ViewPager.OnPageChangeListener
 {
@@ -224,6 +222,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // TODO: make base Event and use visitor pattern ... evenet.visit( this ) or such
         if ( o instanceof RequestEvent ) {
             final Intent intent = new Intent( this,PlaceOrderActivity.class );
+
+            final RequestEvent requestEvent = ( RequestEvent)o;
+            if ( requestEvent.address != null ) {
+                final Bundle bundle = new Bundle();
+                bundle.putParcelable( "address",requestEvent.address );
+                intent.putExtras( bundle );
+            }
+
             startActivityForResult( intent,1 );
         }
     }

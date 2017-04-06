@@ -21,6 +21,9 @@ import com.gubo.vosh.R;
 import com.gubo.vosh.event.*;
 import com.gubo.vosh.databinding.WashBinding;
 
+import java.util.List;
+import java.util.Locale;
+
 /**
  * Created by GUBO on 4/4/2017.
  */
@@ -31,9 +34,11 @@ public class WashFragment extends Fragment implements OnMapReadyCallback
         return mapFragment;
     }
 
+    private GoogleMap googleMap;
     private MapView mapView;
 
     @Inject EventBus eventBus;
+    @Inject Context context;
     @Inject Domain domain;
 
     @Override
@@ -62,6 +67,8 @@ public class WashFragment extends Fragment implements OnMapReadyCallback
     @Override
     public void onMapReady( final GoogleMap googleMap ) {
         try {
+            this.googleMap = googleMap;
+
             android.location.LocationManager locationManager = ( android.location.LocationManager )getContext().getSystemService( Context.LOCATION_SERVICE );
             final android.location.Location location = locationManager.getLastKnownLocation( LocationManager.NETWORK_PROVIDER );
 
@@ -70,6 +77,7 @@ public class WashFragment extends Fragment implements OnMapReadyCallback
             googleMap.addMarker( new MarkerOptions().position( spot ).title( "Current Location" ) );
             final CameraUpdate center = CameraUpdateFactory.newLatLng( spot );
             final CameraUpdate zoom = CameraUpdateFactory.zoomTo(15);
+            googleMap.setMyLocationEnabled( true );
             googleMap.moveCamera( center );
             googleMap.animateCamera( zoom );
         } catch ( SecurityException x  ) {
@@ -87,7 +95,20 @@ public class WashFragment extends Fragment implements OnMapReadyCallback
     }
 
     public void onRequest() {
-        eventBus.send( new RequestEvent() );
+        if ( googleMap == null ) { return; }
+
+        Address address = null;
+        try {
+            final Location location = googleMap.getMyLocation();
+            final Geocoder geocoder = new Geocoder( context,Locale.getDefault() );
+            final List<Address> addresses = geocoder.getFromLocation( location.getLatitude(),location.getLongitude(),1 );
+            if ( (addresses != null)  && (addresses.size() > 0) ) {
+                address = addresses.get( 0 );
+            }
+        } catch ( Exception x ) {
+            DBG.m( x );
+        }
+        eventBus.send( new RequestEvent( address ) );
     }
 
     @Override
