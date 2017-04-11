@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#E0E0F0" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/orderitemthumbnailimageview" android:scaleType="centerCrop"
+            android:background="#22000000" android:layout_width="64dp" android:layout_height="64dp">
+        </ImageView>
+        <TextView
+            android:id="@+id/orderitemauthortextview" android:hint="author" android:gravity="center"
+            android:padding="5dp"
+            style="@style/TextAppearance.AppCompat.Small" android:ellipsize="end" android:maxLines="1"
+            android:layout_weight=".35" android:layout_width="0dp" android:layout_height="match_parent">
+        </TextView>
+        <View android:background="#888888" android:layout_width="1dp" android:layout_height="match_parent"></View>
+        <TextView
+            android:id="@+id/orderitemtitletextview" android:hint="title" android:gravity="top|left"
+            android:padding="5dp"
+            style="@style/TextAppearance.AppCompat.Small" android:ellipsize="end"
+            android:layout_weight=".65" android:layout_width="0dp" android:layout_height="match_parent">
+        </TextView>
+    </LinearLayout>
+
+    <View android:background="#555555" android:layout_width="match_parent" android:layout_height="1dp"></View>
+
+</LinearLayout>

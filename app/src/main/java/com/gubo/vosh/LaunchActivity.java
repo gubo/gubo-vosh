@@ -68,7 +68,8 @@ public class LaunchActivity extends AppCompatActivity
     }
 
     private void go() {
-        final Intent intent = new Intent( this,MainActivity.class );
+        //final Intent intent = new Intent( this,MainActivity.class );
+        final Intent intent = new Intent( this,OrderActivity.class );
         startActivity( intent );
         finish();
     }
